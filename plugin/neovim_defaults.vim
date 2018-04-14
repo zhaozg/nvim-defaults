@@ -1,11 +1,8 @@
 " plugin/neovim_defaults.vim - Neovim defaults for Vim
 " Maintainer: Noah Frederick
 
-if exists('g:loaded_neovim_defaults') || &compatible
-  finish
-else
-  let g:loaded_neovim_defaults = 1
-endif
+let g:loaded_neovim_defaults = 1
+set nocompatible
 
 if has('autocmd')
   filetype plugin indent on
@@ -18,7 +15,10 @@ endif
 set autoindent
 set autoread
 set backspace=indent,eol,start
+set backupdir=.,~/.local/share/nvim/backup
+set belloff=all
 set complete-=i
+set directory=~/.local/share/nvim/swap//
 set display=lastline
 set encoding=utf-8
 set formatoptions=tcqj
@@ -31,10 +31,12 @@ set listchars=tab:>\ ,trail:-,nbsp:+
 set mouse=a
 set nrformats=hex
 set sessionoptions-=options
+set showcmd
 set smarttab
 set tabpagemax=50
 set tags=./tags;,tags
 set ttyfast
+set undodir=~/.local/share/nvim/undo
 set viminfo+=!
 set wildmenu
 
