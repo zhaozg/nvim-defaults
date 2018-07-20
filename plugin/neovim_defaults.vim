@@ -1,8 +1,11 @@
 " plugin/neovim_defaults.vim - Neovim defaults for Vim
 " Maintainer: Noah Frederick
 
-let g:loaded_neovim_defaults = 1
-set nocompatible
+if exists('g:loaded_neovim_defaults') || &compatible
+  finish
+else
+  let g:loaded_neovim_defaults = 1
+endif
 
 if has('autocmd')
   filetype plugin indent on
@@ -18,20 +21,26 @@ set backspace=indent,eol,start
 set backupdir=.,~/.local/share/nvim/backup
 set belloff=all
 set complete-=i
+set cscopeverbose
 set directory=~/.local/share/nvim/swap//
 set display=lastline
 set encoding=utf-8
+set fillchars=vert:│,fold:·
 set formatoptions=tcqj
 set history=10000
 set hlsearch
 set incsearch
-set langnoremap
+if exists('+langremap') && has('langmap')
+  set langnoremap
+endif
 set laststatus=2
 set listchars=tab:>\ ,trail:-,nbsp:+
-set mouse=a
+set mouse=
 set nrformats=hex
+set ruler
 set sessionoptions-=options
 set showcmd
+set sidescroll=1
 set smarttab
 set tabpagemax=50
 set tags=./tags;,tags
@@ -42,7 +51,7 @@ set wildmenu
 
 " Load matchit.vim, if a newer version isn't already installed.
 " Neovim includes matchit.vim as a regular plug-in.
-if !exists("g:loaded_matchit") && findfile("plugin/matchit.vim", &runtimepath) ==# ""
+if !exists('g:loaded_matchit') && findfile('plugin/matchit.vim', &runtimepath) ==# ''
   runtime! macros/matchit.vim
 endif
 
