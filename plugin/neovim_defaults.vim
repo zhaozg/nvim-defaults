@@ -45,7 +45,6 @@ set smarttab
 set tabpagemax=50
 set tags=./tags;,tags
 set ttyfast
-set ttymouse=xterm2
 set undodir=~/.local/share/nvim/undo
 set viminfo+=!
 set wildmenu
@@ -175,7 +174,6 @@ set foldlevelstart=99
 set background=dark         " Assume dark background
 set cursorline              " Highlight current line
 set fileformats=unix,dos,mac        " Use Unix as the standard file type
-set fillchars=vert:│,stl:\,stlnc:\
 
 highlight clear SignColumn  " SignColumn should match background
 " highlight clear LineNr      " Current line number row will have same background color in relative mode
