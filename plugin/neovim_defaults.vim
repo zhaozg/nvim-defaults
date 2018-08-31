@@ -156,11 +156,6 @@ set wildignore+=*\\tmp\\*,*.exe            " Windows
     let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
     let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
   endif
-
-  " inside neovim
-  if has('nvim')
-    let $NVIM_TUI_ENABLE_CURSOR_SHAPE=2
-  endif
 " }
 
 set backup
