@@ -165,7 +165,6 @@ set foldmethod=marker
 set foldcolumn=3
 set foldlevelstart=99
 
-set background=dark         " Assume dark background
 set cursorline              " Highlight current line
 set fileformats=unix,dos,mac        " Use Unix as the standard file type
 
