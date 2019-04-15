@@ -17,6 +17,7 @@ endif
 " Settings based on :help nvim-defaults
 set autoindent
 set autoread
+set updatetime=200
 set backspace=indent,eol,start
 set backupdir=~/.local/share/nvim/backup
 set belloff=all
