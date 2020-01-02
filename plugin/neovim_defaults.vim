@@ -132,7 +132,7 @@ set whichwrap+=<,>,h,l  " Allow backspace and cursor keys to cross line boundari
 " }}} misc setting "
 
 " encoding setting {{{ "
-set termencoding=utf-8
+set encoding=utf-8
 set fileencoding=utf-8
 set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
 " }}} encoding setting "
